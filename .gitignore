@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+raw_api_logs/
+submissions/
+node_modules/
+.venv/
+published.json
+publication-registry-*.json

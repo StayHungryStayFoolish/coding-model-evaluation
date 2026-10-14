@@ -1,0 +1,16 @@
+{
+  ".gitignore": "6b3ba6fda58a9485e6721b4870bd074fad44c53c8ddcfafe154e9c7d9571fc3b",
+  "README.md": "ef3422f6abc9e6f948f4e1890fd401372a95d752bc2c2fb8bf8fe0fdaed303c0",
+  "README.zh-CN.md": "5a05b352d73023b84c5578dfa275ac239fa7c892387da9c82eeab3f604f87de2",
+  "data/antigravity.csv": "84d8a7a03843b69575cfa24ae3d8d25ab5311cc3003aac4f4bb458c1d336fc0e",
+  "data/scenario_runs.csv": "22df81c04cd458f4d7a6e09dd1beee6aea8493853caf2c5e0bd8b1ae6abc8418",
+  "data/scenario_totals.csv": "4c51848170caa1cf94b501527ca04cb95cec3e7a37086613c8cf101f88eed08a",
+  "data/scenarios.json": "ad9dc393b7b7b205502f0af0f66e83a5fe17d3e183d088ca63135f02b1d95195",
+  "data/summary.csv": "bdea9ef9521abef8096f8509812f55761e0ae1e041489beadd8927f85e6b0a0a",
+  "docs/data-dictionary.md": "6e6ff8c9db001250ec24157fd1ec84080a256a4fb7cf2c8f30ffb8f54cb3b9dd",
+  "docs/methodology.md": "e47b5fd55371186825325b4250b7295b3c7395fc866752e2f08e54eaf58ad911",
+  "docs/methodology.zh-CN.md": "fef30d0110a1b55c8a4a021997ef20239da432c92a2574fa8f12b3ca56971e86",
+  "docs/release-scope.md": "162147035be1542f5a82b96d124996a6aa4bd83d11c7bb75795f8213b5c8304b",
+  "reports/report.html": "91859c1bc4ea6ecb58a16e783cea82e9b9e31166deb3902e08eb667b93561995",
+  "tools/recompute_results.py": "81d2255b85016b8cb982bf3ab43c4642bacd45c327e850667668b0dcd890dde0"
+}

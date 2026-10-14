@@ -1,0 +1,5 @@
+model,status,full_successes,scenario_executions,functional_passed,functional_total,thinking_configuration,comparable_cost_usd,comparable_latency_seconds
+gemini-4-argon,measured,21,21,361,361,tool_managed,,
+claude-opus-5-5,measured,20,21,359,361,tool_managed,,
+claude-sonnet-5-5,measured,19,21,358,361,tool_managed,,
+claude-haiku-5-5,not_tested,,,,,,,
