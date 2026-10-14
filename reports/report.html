@@ -636,6 +636,7 @@ header.site .brand { white-space: nowrap; }
 <li><strong>多次尝试有用，但成功覆盖与样本数并非线性增长。</strong>Brown 等在 SWE-bench Lite 中，将 DeepSeek-Coder-V2-Instruct 从一次采样增至 250 次，问题覆盖率由 15.9% 提升至 56%；正确结果的识别与验证是将候选答案转为可交付结果的关键。这里的样本数不等于 Token 或费用倍数。<a href="https://arxiv.org/abs/2407.21787" target="_blank" rel="noopener noreferrer">Large Language Monkeys（2024）</a>。</li>
 <li><strong>有效测试也可能让较小模型更经济。</strong>Hassid 等比较等预算代码生成：有单元测试可选出正确候选时，较小模型多次生成可改善结果；缺少单元测试、改用候选排序时，则落后于较大模型的单次输出。业务启示是同时评估模型和验证体系，不能只凭模型档位决定费用结论。<a href="https://arxiv.org/abs/2404.00725" target="_blank" rel="noopener noreferrer">The Larger the Better?（COLM 2024）</a>。</li>
 </ol><p class="scope-note">上述研究支持“更多 Token 未必弥补特定任务的能力差距”，同时也支持“在可验证的任务上，多次尝试可能很划算”。本报告以四模型的实际结果作为选型主依据。</p></div></section></main><footer class="site"><div class="wrap"><span>Gemini 4 Argon 与 Claude · Coding 业务场景实测对比</span><span>2026-10-14 · 双语版 1.6</span></div></footer></template><script type="application/json" id="comparisonData">{"en": {"a": {"label": "Direct API", "note": "21 scenarios, each repeated three times. Success requires the complete scenario to pass. Time is median latency per model request; multi-turn scenarios contain multiple requests.", "models": [{"name": "Argon", "rate": 88.88888888888889, "success": 56, "total": 63, "cost": 0.3396356089285714, "latency": 73.63}, {"name": "Opus 5.5", "rate": 85.71428571428571, "success": 54, "total": 63, "cost": 0.6119823703703703, "latency": 63.75}, {"name": "Sonnet 5.5", "rate": 82.53968253968253, "success": 52, "total": 63, "cost": 0.22167096153846153, "latency": 30.65}, {"name": "Haiku 5.5", "rate": 74.60317460317461, "success": 47, "total": 63, "cost": 0.029638302127659572, "latency": 54.21}]}, "b": {"label": "Controlled engineering", "note": "12 engineering tasks, each repeated three times. Success is the final outcome after permitted feedback and repairs. Time is the median full engineering session.", "models": [{"name": "Argon", "rate": 100.0, "success": 36, "total": 36, "cost": 0.1214172277777778, "latency": 48.89}, {"name": "Opus 5.5", "rate": 100.0, "success": 36, "total": 36, "cost": 0.25365711111111106, "latency": 46.71}, {"name": "Sonnet 5.5", "rate": 100.0, "success": 36, "total": 36, "cost": 0.09968494444444442, "latency": 27.68}, {"name": "Haiku 5.5", "rate": 97.22222222222221, "success": 35, "total": 36, "cost": 0.007321742857142856, "latency": 28.3}]}, "ag": {"label": "Antigravity", "note": "Archived results for the same 21 scenarios; Sonnet includes rule-compliant retests. Full scenarios are compared after excluding one ambiguous check. Haiku did not participate. Comparable cost and timing records are unavailable.", "models": [{"name": "Argon", "rate": 100.0, "success": 21, "total": 21, "cost": null, "latency": null}, {"name": "Opus 5.5", "rate": 95.23809523809524, "success": 20, "total": 21, "cost": null, "latency": null}, {"name": "Sonnet 5.5", "rate": 90.47619047619048, "success": 19, "total": 21, "cost": null, "latency": null}, {"name": "Haiku 5.5", "rate": null, "success": null, "total": null, "cost": null, "latency": null}]}}, "zh": {"a": {"label": "API 直接调用", "note": "21 个场景，各重复三次。成功率按完整场景计算；时间为单次模型请求中位数，多轮场景包含多次请求。", "models": [{"name": "Argon", "rate": 88.88888888888889, "success": 56, "total": 63, "cost": 0.3396356089285714, "latency": 73.63}, {"name": "Opus 5.5", "rate": 85.71428571428571, "success": 54, "total": 63, "cost": 0.6119823703703703, "latency": 63.75}, {"name": "Sonnet 5.5", "rate": 82.53968253968253, "success": 52, "total": 63, "cost": 0.22167096153846153, "latency": 30.65}, {"name": "Haiku 5.5", "rate": 74.60317460317461, "success": 47, "total": 63, "cost": 0.029638302127659572, "latency": 54.21}]}, "b": {"label": "受控工程开发补充", "note": "12 个工程任务，各重复三次。成功率为允许反馈修复后的最终结果；时间为完整工程会话中位数。", "models": [{"name": "Argon", "rate": 100.0, "success": 36, "total": 36, "cost": 0.1214172277777778, "latency": 48.89}, {"name": "Opus 5.5", "rate": 100.0, "success": 36, "total": 36, "cost": 0.25365711111111106, "latency": 46.71}, {"name": "Sonnet 5.5", "rate": 100.0, "success": 36, "total": 36, "cost": 0.09968494444444442, "latency": 27.68}, {"name": "Haiku 5.5", "rate": 97.22222222222221, "success": 35, "total": 36, "cost": 0.007321742857142856, "latency": 28.3}]}, "ag": {"label": "Antigravity 调用", "note": "21 个场景的既有结果；Sonnet 使用合规复测后的结果。排除一项契约歧义后比较完整场景。Haiku 未参加此维度。调用费用和时间缺少可比记录。", "models": [{"name": "Argon", "rate": 100.0, "success": 21, "total": 21, "cost": null, "latency": null}, {"name": "Opus 5.5", "rate": 95.23809523809524, "success": 20, "total": 21, "cost": null, "latency": null}, {"name": "Sonnet 5.5", "rate": 90.47619047619048, "success": 19, "total": 21, "cost": null, "latency": null}, {"name": "Haiku 5.5", "rate": null, "success": null, "total": null, "cost": null, "latency": null}]}}}</script><script>'use strict';
+const SHARE_URL = 'https://www.leland-gdemo.com/r/argon';
 const DATA = JSON.parse(document.getElementById('comparisonData').textContent);
 const report = document.getElementById('reportContent');
 const chineseTemplate = document.getElementById('chineseReport');
@@ -646,7 +647,7 @@ const UI = {
   en: {
     nav: {findings:'Summary',economics:'Cost & value',business:'Scenarios',usage:'Usage',appendix:'Appendix'},
     contents:'Contents', title:'Gemini 4 Argon and Claude | Coding Business Scenarios', theme:'Toggle light / dark theme',
-    copied:'Link copied. Ready to share.', copyFailed:'Copy the full link from your browser’s address bar.',
+    copied:'Link copied. Ready to share.', copyFailed:'Please copy this link: ',
     missing:'Comparable records unavailable', notTested:'Not tested', seconds:'s',
     rate:'Full-success rate · higher is better', cost:'Cost per successful scenario / task · lower is better',
     requestTime:'Median request time · lower is better', sessionTime:'Median session time · lower is better',
@@ -655,7 +656,7 @@ const UI = {
   zh: {
     nav: {findings:'摘要',economics:'费用价值',business:'业务场景',usage:'使用方式',appendix:'附录'},
     contents:'报告目录',title:'Gemini 4 Argon 与 Claude｜Coding 业务场景实测对比',theme:'切换深浅色主题',
-    copied:'链接已复制，可直接转发',copyFailed:'请复制浏览器地址栏中的完整链接',
+    copied:'链接已复制，可直接转发',copyFailed:'请手动复制此链接：',
     missing:'缺少可比记录',notTested:'未测试',seconds:'秒',
     rate:'完整成功率 · 越高越好',cost:'每成功场景 / 任务费用 · 越低越好',
     requestTime:'单次请求中位耗时 · 越短越好',sessionTime:'会话中位耗时 · 越短越好',
@@ -706,12 +707,9 @@ function bindReport() {
   document.getElementById('shareButton').addEventListener('click',async()=>{
     const status=document.getElementById('shareStatus');
     try {
-      const url=new URL(location.href);
-      url.hash='';
-      url.searchParams.set('lang',language);
-      await navigator.clipboard.writeText(url.href);
+      await navigator.clipboard.writeText(SHARE_URL);
       status.textContent=UI[language].copied;
-    } catch (_) { status.textContent=UI[language].copyFailed; }
+    } catch (_) { status.textContent=UI[language].copyFailed+SHARE_URL; }
   });
   document.getElementById('printButton').addEventListener('click',()=>window.print());
   document.getElementById('trackSelect').addEventListener('change',updateComparison);
