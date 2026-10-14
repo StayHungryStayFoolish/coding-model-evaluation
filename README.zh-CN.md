@@ -1,12 +1,12 @@
 # Coding 模型业务场景评测
 
-- 围绕 33 个 Coding 业务场景，对比 Gemini 4 Argon 与 Claude Opus、Sonnet、Haiku 5.5。
+- 以 33 个业务场景覆盖 Coding 生命周期的主要阶段，从需求开发到维护、升级与交付，对比 Gemini 4 Argon 与 Claude Opus、Sonnet、Haiku 5.5。
 - 分数来自可执行检查，不由裁判模型打分；API、受控工程开发与 Antigravity 分别呈现。
 - 本仓库公开双语报告、评测方法和脱敏数值结果，提供 Python 脚本重新汇总并校验数据。
 
 [English](README.md) · [双语 HTML 报告](reports/report.html) · [评测方法](docs/methodology.zh-CN.md) · [场景目录](data/scenarios.json)
 
-本报告基于定制 Coding 场景实测整理，**不代表 Google 官方评测数据或结论**。报告日期：2026 年 10 月 14 日；版本：1.5。
+本报告基于定制 Coding 场景实测整理，**不代表 Google 官方评测数据或结论**。报告日期：2026 年 10 月 14 日；版本：1.6。
 
 ## 查看报告
 

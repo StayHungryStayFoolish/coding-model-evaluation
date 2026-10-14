@@ -8,6 +8,8 @@
 
 ## Dataset and business coverage
 
+The scenarios span the main stages of the coding lifecycle: feature development, evolving requirements, code maintenance and quality improvement, frontend/backend and cross-module work, cross-language migration, upgrades, delivery and operations. They combine common business development tasks with complex concurrency, storage-state and compiler problems. Different scenarios test these stages separately; controlled engineering tasks provide an edit-check-repair loop within each task. This is not a single production project evaluated end to end throughout its lifecycle.
+
 The dataset is a custom collection of task specifications, initial code and acceptance checks organized around development work. It is not a random sample of customer production traffic. The [bilingual catalog](../data/scenarios.json) lists each scenario and its requirement.
 
 | Category | Scenarios | Examples of tested outcomes |

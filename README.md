@@ -1,12 +1,12 @@
 # Coding Model Evaluation
 
-- Compare Gemini 4 Argon with Claude Opus, Sonnet and Haiku 5.5 on 33 coding business scenarios.
+- Compare Gemini 4 Argon with Claude Opus, Sonnet and Haiku 5.5 on 33 business scenarios spanning the main stages of the coding lifecycle, from feature development to maintenance, upgrades and delivery.
 - Scores come from executable checks, not a judge model. Direct API, controlled engineering and Antigravity results are reported separately.
 - This release includes a bilingual report, methodology and sanitized numerical results. The included Python script validates and recomputes the published aggregates.
 
 [中文说明](README.zh-CN.md) · [Bilingual HTML report](reports/report.html) · [Methodology](docs/methodology.md) · [Scenario catalog](data/scenarios.json)
 
-This is a practitioner evaluation based on a custom task set, **not official Google evaluation data or conclusions**. Report date: October 14, 2026. Report edition: 1.5.
+This is a practitioner evaluation based on a custom task set, **not official Google evaluation data or conclusions**. Report date: October 14, 2026. Report edition: 1.6.
 
 ## Read the report
 
